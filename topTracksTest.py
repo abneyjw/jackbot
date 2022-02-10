@@ -7,7 +7,10 @@ from spotipy.oauth2 import SpotifyClientCredentials
 
 uri = "3uwAm6vQy7kWPS2bciKWx9"
 
+
 spotify = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials())
+
+spotify.current_user()
 
 results = spotify.artist_albums(uri, album_type='single')
 albums = results['items']
