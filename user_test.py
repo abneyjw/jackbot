@@ -9,13 +9,13 @@ load_dotenv()
 
 def interact(device):
     loop = True
-    print("Valid Commands: skip, last, pause, play, current, quit")
+    print("Valid Commands: skip, prev, pause, play, current, quit")
     while(loop):
         cmd = input()
         try:
             if(cmd == "skip"):
                 sp.next_track()
-            elif(cmd == "last"):
+            elif(cmd == "prev"):
                 sp.previous_track()
             elif(cmd == "pause"):
                 sp.pause_playback()
@@ -26,7 +26,7 @@ def interact(device):
             elif(cmd == "quit"):
                 loop = False
             else:
-                print("Valid Commands: skip, last, pause, play, current, quit")
+                print("Valid Commands: skip, prev, pause, play, current, quit")
         except spotipy.SpotifyException as err:
             print(err)
 
