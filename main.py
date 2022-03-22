@@ -5,8 +5,7 @@ import time
 from spotify import *
 windll.shcore.SetProcessDpiAwareness(1)
 
-
-
+n = 0
 
 mySpot = Spotify()
 mySpot.setup()
@@ -15,11 +14,15 @@ frm = ttk.Frame(root, padding=10)
 frm.grid()
 title= ttk.Label(frm, text="Spotify")
 title.grid(column=0, row=0)
-ttk.Button(frm, text="Pause", command=lambda: mySpot.interact("pause")).grid(column=1, row=1)
-ttk.Button(frm, text="Play", command=lambda: mySpot.interact("play")).grid(column=2, row=1)
+ttk.Button(frm, text="Prev", command=lambda: mySpot.interact("prev")).grid(column=1, row=1)
+ttk.Button(frm, text="Play/Pause", command=lambda: mySpot.interact("toggle")).grid(column=2, row=1)
+ttk.Button(frm, text="Skip", command=lambda: mySpot.interact("skip")).grid(column=3, row=1)
 
 while True:
-    title["text"]= mySpot.current()
+    if (n == 10):
+        title["text"]= mySpot.current()
+        if(not mySpot.playing()):
+            title["text"] = title["text"] + " (paused)"
+        n = 0
     root.update()
-
-
+    n = n + 1

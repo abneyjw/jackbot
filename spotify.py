@@ -8,6 +8,13 @@ from dotenv import load_dotenv
 
 class Spotify:
     load_dotenv()
+    
+    def playing(self):
+        if(sp.current_playback()['is_playing']):
+            return True
+        else:
+            return False
+
 
     def current(self):
         return ("Currently Playing: " + sp.currently_playing()['item']['name'] + " - " + sp.currently_playing()['item']['artists'][0]['name'])
@@ -28,6 +35,12 @@ class Spotify:
                     sp.start_playback()
                 elif(cmd == "current"):
                     return self.current()
+                elif(cmd == "toggle"):
+                    print(sp.current_playback()['is_playing'])
+                    if(sp.current_playback()['is_playing']):
+                        sp.pause_playback()
+                    else:
+                        sp.start_playback()
                 elif(cmd == "quit"):
                     loop = False
                 else:
@@ -36,7 +49,6 @@ class Spotify:
                 print(err)
 
     def interact(self,cmd):
-        print(cmd)
         if(cmd == "skip"):
             sp.next_track()
         elif(cmd == "prev"):
@@ -47,6 +59,11 @@ class Spotify:
             sp.start_playback()
         elif(cmd == "current"):
             self.current(sp)
+        elif(cmd == "toggle"):
+                    if(sp.current_playback()['is_playing']):
+                        sp.pause_playback()
+                    else:
+                        sp.start_playback()
 
     def setup(self):
         scope = 'user-read-playback-state user-modify-playback-state'
