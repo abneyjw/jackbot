@@ -14,10 +14,12 @@ class Spotify:
             return True
         else:
             return False
+        
 
 
     def current(self):
         return ("Currently Playing: " + sp.currently_playing()['item']['name'] + " - " + sp.currently_playing()['item']['artists'][0]['name'])
+        
 
     def interact2(self, sp):
         loop = True
@@ -28,7 +30,10 @@ class Spotify:
                 if(cmd == "skip"):
                     sp.next_track()
                 elif(cmd == "prev"):
-                    sp.previous_track()
+                    if(sp.currently_playing()['actions']['disallows']['skipping_prev']):
+                        print("NO")
+                    else:
+                        sp.previous_track()
                 elif(cmd == "pause"):
                     sp.pause_playback()
                 elif(cmd == "play"):
@@ -52,13 +57,16 @@ class Spotify:
         if(cmd == "skip"):
             sp.next_track()
         elif(cmd == "prev"):
-            sp.previous_track()
+            if('skipping_prev' in sp.currently_playing()['actions']['disallows']):
+                print("NO")
+            else:
+                sp.previous_track()
         elif(cmd == "pause"):
             sp.pause_playback()
         elif(cmd == "play"):
             sp.start_playback()
         elif(cmd == "current"):
-            self.current(sp)
+            print(self.current())
         elif(cmd == "toggle"):
                     if(sp.current_playback()['is_playing']):
                         sp.pause_playback()
@@ -79,13 +87,6 @@ class Spotify:
             sp = spotipy.Spotify(auth=token)
             for i in range(5):
                 d = sp.devices()
-                print("[ATTEMPT "+str(i+1)+"] Searching for active device"),
-                time.sleep(1)
-                print('.'),
-                time.sleep(1)
-                print('.'),
-                time.sleep(1)
-                print('.')
                 for j in d['devices']:
                     if j['is_active']:
                         found = True
@@ -93,5 +94,13 @@ class Spotify:
                         break
                 if(found):
                     break
+                print("[ATTEMPT "+str(i+1)+"] Searching for active device"),
+                time.sleep(1)
+                print('.'),
+                time.sleep(1)
+                print('.'),
+                time.sleep(1)
+                print('.')
+                
 
             
