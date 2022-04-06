@@ -1,10 +1,8 @@
-from ctypes import windll
 import time
 import keyboard
 import threading
 from spotify import *
 from weather import *
-windll.shcore.SetProcessDpiAwareness(1)
 
 n = 0
 
@@ -22,11 +20,13 @@ mySpot = Spotify()
 mySpot.setup()
 
 
-
+nice = [1,2,3,4,5,14,21,30,32,33,34]
+cozy = [6,7,8,11,12,13,18,35,36,37,38,39,40]
+storm = [15,16,17,24,25,26,41,42]
+winter = [19,20,21,22,23,29,31,43,44]
 
 try:
-    if(mySpot is None):
-        print("valid")
+    mySpot.interact('current')
     while True:
         if keyboard.is_pressed('e'):
             break
@@ -40,7 +40,8 @@ try:
             mySpot.interact("current")
 except KeyboardInterrupt:
     print("exiting...")
-
+except TypeError:
+    print("No device found")
 
     
 
