@@ -36,12 +36,13 @@ class Weather:
         LOCATION_KEY = "334814"
         API_KEY = "QIYstLjGNnGZxShlvHW4GnhC0aVpZ7z1"
         
-        f = open("currents.txt")
+        f = open("/home/pi/jackbot/currents.txt")
         content = f.readlines()
         t = time.localtime()
         currTime = int(time.strftime("%H",t)) * 60 + int(time.strftime("%M",t))
         f.close()
         
+        print(currTime, '<currtime pasttime>', content[3])
         if(int(content[3]) + 30 < currTime):
             async with ClientSession() as websession:
                 try:

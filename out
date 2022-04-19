@@ -1,0 +1,162 @@
+UID        PID  PPID  C STIME TTY          TIME CMD
+root         1     0  6 17:36 ?        00:00:05 /sbin/init splash
+root         2     0  0 17:36 ?        00:00:00 [kthreadd]
+root         3     2  0 17:36 ?        00:00:00 [rcu_gp]
+root         4     2  0 17:36 ?        00:00:00 [rcu_par_gp]
+root         5     2  0 17:36 ?        00:00:00 [kworker/0:0-rcu_gp]
+root         6     2  0 17:36 ?        00:00:00 [kworker/0:0H-mmc_complete]
+root         7     2  0 17:36 ?        00:00:00 [kworker/u8:0-events_unbound]
+root         8     2  0 17:36 ?        00:00:00 [mm_percpu_wq]
+root         9     2  0 17:36 ?        00:00:00 [rcu_tasks_rude_]
+root        10     2  0 17:36 ?        00:00:00 [rcu_tasks_trace]
+root        11     2  0 17:36 ?        00:00:00 [ksoftirqd/0]
+root        12     2  0 17:36 ?        00:00:00 [rcu_sched]
+root        13     2  0 17:36 ?        00:00:00 [migration/0]
+root        14     2  0 17:36 ?        00:00:00 [cpuhp/0]
+root        15     2  0 17:36 ?        00:00:00 [cpuhp/1]
+root        16     2  0 17:36 ?        00:00:00 [migration/1]
+root        17     2  0 17:36 ?        00:00:00 [ksoftirqd/1]
+root        18     2  0 17:36 ?        00:00:00 [kworker/1:0+events_freezable]
+root        19     2  0 17:36 ?        00:00:00 [kworker/1:0H-events_highpri]
+root        20     2  0 17:36 ?        00:00:00 [cpuhp/2]
+root        21     2  0 17:36 ?        00:00:00 [migration/2]
+root        22     2  0 17:36 ?        00:00:00 [ksoftirqd/2]
+root        23     2  0 17:36 ?        00:00:00 [kworker/2:0-events]
+root        24     2  0 17:36 ?        00:00:00 [kworker/2:0H-kblockd]
+root        25     2  0 17:36 ?        00:00:00 [cpuhp/3]
+root        26     2  0 17:36 ?        00:00:00 [migration/3]
+root        27     2  0 17:36 ?        00:00:00 [ksoftirqd/3]
+root        28     2  0 17:36 ?        00:00:00 [kworker/3:0-cgroup_destroy]
+root        29     2  0 17:36 ?        00:00:00 [kworker/3:0H-kblockd]
+root        30     2  0 17:36 ?        00:00:00 [kdevtmpfs]
+root        31     2  0 17:36 ?        00:00:00 [netns]
+root        32     2  0 17:36 ?        00:00:00 [kworker/0:1-events]
+root        33     2  0 17:36 ?        00:00:00 [kworker/1:1-events_long]
+root        34     2  0 17:36 ?        00:00:00 [kauditd]
+root        35     2  0 17:36 ?        00:00:00 [kworker/0:2-events]
+root        36     2  0 17:36 ?        00:00:00 [khungtaskd]
+root        37     2  0 17:36 ?        00:00:00 [oom_reaper]
+root        38     2  0 17:36 ?        00:00:00 [writeback]
+root        39     2  0 17:36 ?        00:00:00 [kcompactd0]
+root        57     2  0 17:36 ?        00:00:00 [kblockd]
+root        58     2  0 17:36 ?        00:00:00 [blkcg_punt_bio]
+root        59     2  0 17:36 ?        00:00:00 [watchdogd]
+root        60     2  0 17:36 ?        00:00:00 [kworker/2:1-events]
+root        61     2  0 17:36 ?        00:00:00 [kworker/1:1H-kblockd]
+root        62     2  0 17:36 ?        00:00:00 [rpciod]
+root        63     2  0 17:36 ?        00:00:00 [kworker/u9:0-hci0]
+root        64     2  0 17:36 ?        00:00:00 [xprtiod]
+root        65     2  0 17:36 ?        00:00:00 [kswapd0]
+root        66     2  0 17:36 ?        00:00:00 [nfsiod]
+root        67     2  0 17:36 ?        00:00:00 [kworker/3:1-events]
+root        68     2  0 17:36 ?        00:00:00 [kworker/1:2-events]
+root        69     2  0 17:36 ?        00:00:00 [iscsi_eh]
+root        70     2  0 17:36 ?        00:00:00 [iscsi_destroy]
+root        71     2  0 17:36 ?        00:00:00 [dwc_otg]
+root        72     2  0 17:36 ?        00:00:00 [DWC Notificatio]
+root        73     2  0 17:36 ?        00:00:00 [vchiq-slot/0]
+root        74     2  0 17:36 ?        00:00:00 [vchiq-recy/0]
+root        75     2  0 17:36 ?        00:00:00 [vchiq-sync/0]
+root        76     2  0 17:36 ?        00:00:00 [zswap-shrink]
+root        77     2  0 17:36 ?        00:00:00 [kworker/1:3-events]
+root        78     2  0 17:36 ?        00:00:00 [kworker/1:4-events_long]
+root        79     2  0 17:36 ?        00:00:00 [kworker/1:5-mm_percpu_wq]
+root        80     2  0 17:36 ?        00:00:00 [kworker/1:6-events_long]
+root        81     2  0 17:36 ?        00:00:00 [kworker/1:7-rcu_gp]
+root        82     2  0 17:36 ?        00:00:00 [mmc_complete]
+root        83     2  0 17:36 ?        00:00:00 [kworker/0:1H+kblockd]
+root        84     2  0 17:36 ?        00:00:00 [kworker/3:1H-kblockd]
+root        85     2  0 17:36 ?        00:00:00 [kworker/3:2H]
+root        86     2  0 17:36 ?        00:00:00 [jbd2/mmcblk0p2-]
+root        87     2  0 17:36 ?        00:00:00 [ext4-rsv-conver]
+root        88     2  0 17:36 ?        00:00:00 [kworker/u8:1-flush-179:0]
+root        90     2  0 17:36 ?        00:00:00 [kworker/2:1H]
+root        91     2  0 17:36 ?        00:00:00 [kworker/2:2H-kblockd]
+root        92     2  0 17:36 ?        00:00:00 [kworker/0:2H-kblockd]
+root        93     2  0 17:36 ?        00:00:00 [ipv6_addrconf]
+root        94     2  0 17:36 ?        00:00:00 [kworker/2:2-mm_percpu_wq]
+root       109     2  0 17:36 ?        00:00:00 [kworker/1:2H]
+root       125     1  1 17:36 ?        00:00:01 /lib/systemd/systemd-journald
+root       131     2  0 17:36 ?        00:00:00 [kworker/3:2-events_power_efficient]
+root       137     2  0 17:36 ?        00:00:00 [kworker/u8:2-brcmf_wq/mmc1:0001:1]
+root       158     1  2 17:36 ?        00:00:01 /lib/systemd/systemd-udevd
+root       187     2  0 17:36 ?        00:00:00 [vchiq-keep/0]
+root       188     2  0 17:36 ?        00:00:00 [SMIO]
+root       192     2  0 17:36 ?        00:00:00 [mmal-vchiq]
+root       196     2  0 17:36 ?        00:00:00 [mmal-vchiq]
+root       203     2  0 17:36 ?        00:00:00 [mmal-vchiq]
+root       205     2  0 17:36 ?        00:00:00 [mmal-vchiq]
+root       208     2  0 17:36 ?        00:00:00 [mmal-vchiq]
+root       210     2  0 17:36 ?        00:00:00 [mmal-vchiq]
+root       272     2  0 17:36 ?        00:00:00 [cfg80211]
+root       274     2  0 17:36 ?        00:00:00 [brcmf_wq/mmc1:0]
+root       276     2  0 17:36 ?        00:00:00 [brcmf_wdog/mmc1]
+root       277     2  0 17:36 ?        00:00:00 [kworker/0:3-events]
+avahi      322     1  0 17:36 ?        00:00:00 avahi-daemon: running [raspberrypi.local]
+root       323     1  0 17:36 ?        00:00:00 /usr/sbin/cron -f
+message+   324     1  1 17:36 ?        00:00:00 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+avahi      331   322  0 17:36 ?        00:00:00 avahi-daemon: chroot helper
+root       350     1  0 17:36 ?        00:00:00 /usr/sbin/rsyslogd -n -iNONE
+root       376     1  0 17:36 ?        00:00:00 /lib/systemd/systemd-logind
+nobody     381     1  0 17:36 ?        00:00:00 /usr/sbin/thd --triggers /etc/triggerhappy/triggers.d/ --socket /run/thd.socket --user nobody --deviceglob /dev/input/event*
+root       386     1  0 17:36 ?        00:00:00 /usr/libexec/udisks2/udisksd
+root       387     1  0 17:36 ?        00:00:00 /sbin/wpa_supplicant -u -s -O /run/wpa_supplicant
+root       396     2  0 17:36 ?        00:00:00 [cec-vc4]
+root       397     2  0 17:36 ?        00:00:00 [irq/97-vc4 hdmi]
+root       401     2  0 17:36 ?        00:00:00 [card0-crtc0]
+root       402     1  0 17:36 ?        00:00:00 /usr/sbin/dhcpcd -b -q
+root       404     2  0 17:36 ?        00:00:00 [card0-crtc1]
+root       405     2  0 17:36 ?        00:00:00 [card0-crtc2]
+root       407     2  0 17:36 ?        00:00:00 [card0-crtc3]
+root       410     2  0 17:36 ?        00:00:00 [kworker/3:3-events]
+root       413     2  0 17:36 ?        00:00:00 [kworker/u8:3-events_unbound]
+root       471     1  0 17:36 ?        00:00:00 /usr/sbin/rngd -r /dev/hwrng
+root       480     1  0 17:36 ?        00:00:00 /usr/libexec/polkitd --no-debug
+root       521     1  0 17:36 ?        00:00:00 /sbin/wpa_supplicant -s -B -P /run/wpa_supplicant.wlan0.pid -i wlan0 -D nl80211,wext -c /etc/wpa_supplicant/wpa_supplicant.conf
+root       575     1  0 17:36 ?        00:00:00 /usr/sbin/cupsd -l
+root       581     1  0 17:36 ?        00:00:00 /usr/sbin/lightdm
+root       585     1  0 17:36 ?        00:00:00 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root       590   581  2 17:36 tty7     00:00:01 /usr/lib/xorg/Xorg :0 -seat seat0 -auth /var/run/lightdm/root/:0 -nolisten tcp vt7 -novtswitch
+root       591     1  0 17:36 ?        00:00:00 /usr/sbin/cups-browsed
+root       605     1  0 17:36 ?        00:00:00 /usr/bin/hciattach /dev/serial1 bcm43xx 921600 noflow - b8:27:eb:90:5d:48
+root       606     2  0 17:36 ?        00:00:00 [kworker/u9:1-hci0]
+root       607     2  0 17:36 ?        00:00:00 [kworker/u9:2-hci0]
+root       618     1  0 17:36 ?        00:00:00 /usr/libexec/bluetooth/bluetoothd
+root       624     2  0 17:36 ?        00:00:00 [cryptd]
+root       667   581  0 17:36 ?        00:00:00 lightdm --session-child 14 17
+lp         668   575  0 17:36 ?        00:00:00 /usr/lib/cups/notifier/dbus dbus://
+colord     673     1  1 17:36 ?        00:00:00 /usr/libexec/colord
+pi         674     1  0 17:36 ?        00:00:00 /lib/systemd/systemd --user
+pi         675   674  0 17:36 ?        00:00:00 (sd-pam)
+pi         698   674  0 17:36 ?        00:00:00 /usr/bin/pipewire
+pi         699   674  0 17:36 ?        00:00:00 /usr/bin/pulseaudio --daemonize=no --log-target=journal
+rtkit      704     1  0 17:36 ?        00:00:00 /usr/libexec/rtkit-daemon
+pi         708   667  0 17:36 ?        00:00:00 /usr/bin/lxsession -s LXDE-pi -e LXDE -w openbox-lxde-pi
+pi         709   674  0 17:36 ?        00:00:00 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+pi         721   698  0 17:36 ?        00:00:00 /usr/bin/pipewire-media-session
+root       746     2  0 17:36 ?        00:00:00 [krfcommd]
+pi         771   708  0 17:36 ?        00:00:00 /usr/bin/ssh-agent x-session-manager
+systemd+   844     1  0 17:36 ?        00:00:00 /lib/systemd/systemd-timesyncd
+pi         850   674  0 17:36 ?        00:00:00 /usr/libexec/gvfsd
+pi         855   674  0 17:36 ?        00:00:00 /usr/libexec/gvfsd-fuse /run/user/1000/gvfs -f
+pi         863   708  0 17:36 ?        00:00:00 openbox --config-file /home/pi/.config/openbox/lxde-pi-rc.xml
+pi         867   708  0 17:36 ?        00:00:00 lxpolkit
+pi         869   708  4 17:36 ?        00:00:02 lxpanel --profile LXDE-pi
+pi         871   708  3 17:36 ?        00:00:02 pcmanfm --desktop --profile LXDE-pi
+pi         879     1  2 17:36 ?        00:00:01 /usr/bin/python3 /usr/share/system-config-printer/applet.py
+pi         880     1  0 17:36 ?        00:00:00 /usr/bin/ssh-agent -s
+pi         889     1  0 17:36 ?        00:00:00 xcompmgr -a
+pi         944   674  0 17:37 ?        00:00:00 /usr/libexec/gvfs-udisks2-volume-monitor
+pi         950     1  0 17:37 ?        00:00:00 /usr/lib/menu-cache/menu-cached /run/user/1000/menu-cached-:0
+pi         956   674  0 17:37 ?        00:00:00 /usr/libexec/gvfs-afc-volume-monitor
+pi         961   674  0 17:37 ?        00:00:00 /usr/libexec/gvfs-gphoto2-volume-monitor
+pi         965   674  0 17:37 ?        00:00:00 /usr/libexec/gvfs-mtp-volume-monitor
+pi         969   674  0 17:37 ?        00:00:00 /usr/libexec/gvfs-goa-volume-monitor
+pi         974   850  0 17:37 ?        00:00:00 /usr/libexec/gvfsd-trash --spawner :1.7 /org/gtk/gvfs/exec_spaw/0
+root      1065     1 33 17:37 ?        00:00:17 /usr/libexec/packagekitd
+pi        1197   863  4 17:37 ?        00:00:01 x-terminal-emulator
+pi        1203  1197  0 17:37 pts/0    00:00:00 bash
+root      1210     2  0 17:37 ?        00:00:00 [kworker/2:3-events]
+root      1233     1  3 17:37 tty1     00:00:00 /bin/login -f
+pi        1239  1233  1 17:37 tty1     00:00:00 -bash
+pi        1252  1203  0 17:37 pts/0    00:00:00 ps -fA

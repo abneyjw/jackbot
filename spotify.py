@@ -19,7 +19,9 @@ class Spotify:
 
     def current(self):
         return ("Currently Playing: " + sp.currently_playing()['item']['name'] + " - " + sp.currently_playing()['item']['artists'][0]['name'])
-        
+       
+    def song(self):
+        return sp.currently_playing()['item']['name']
 
     def interact2(self, sp):
         loop = True
@@ -75,7 +77,6 @@ class Spotify:
 
     def setup(self):
         scope = 'user-read-playback-state user-modify-playback-state'
-
 
         username = "abneyjw"
 
