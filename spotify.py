@@ -8,14 +8,25 @@ from dotenv import load_dotenv
 
 class Spotify:
     load_dotenv()
-    
+    done = False
+
+    def id(self):
+        return sp.current_playback()['item']['id']
+
+    def doneCheck(self):
+        return self.done
+
+    def doneTrue(self):
+        self.done = True
+
     def playing(self):
         if(sp.current_playback()['is_playing']):
             return True
         else:
             return False
         
-
+    def progress(self):
+        return sp.current_playback()['progress_ms']/sp.current_playback()['item']['duration_ms']
 
     def current(self):
         return ("Currently Playing: " + sp.currently_playing()['item']['name'] + " - " + sp.currently_playing()['item']['artists'][0]['name'])

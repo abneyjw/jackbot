@@ -27,23 +27,18 @@ class Weather:
                       "Mostly Cloudy", "Partly Cloudy w/ Showers","Mostly Cloudy w/ Showers",
                       "Partly Cloudy w/ T-Storms","Mostly Cloudy w/ T-Storms",
                       "Mostly Cloudy w/ Flurries","Partly Cloudy w/ Snow"]
-        n = 0
-        for c in conditions:
-            print(str(n) + " " + c)
-            n += 1
         LATITUDE = 36.2168
         LONGITUDE = -81.6746
         LOCATION_KEY = "334814"
         API_KEY = "QIYstLjGNnGZxShlvHW4GnhC0aVpZ7z1"
         
-        f = open("/home/pi/jackbot/currents.txt")
+        f = open("currents.txt")
         content = f.readlines()
         t = time.localtime()
         currTime = int(time.strftime("%H",t)) * 60 + int(time.strftime("%M",t))
+        currDate = time.strftime("%D")
         f.close()
-        
-        print(currTime, '<currtime pasttime>', content[3])
-        if(int(content[3]) + 30 < currTime):
+        if(int(content[4]) + 30 < currTime) or  not (content[3].strip() == currDate):
             async with ClientSession() as websession:
                 try:
                     accuweather = AccuWeather(
@@ -62,9 +57,8 @@ class Weather:
                     f = open("currents.txt", "w")
                     f.write(str(current_conditions['Temperature']['Imperial']['Value']) + "\n")
                     f.write(str(current_conditions['PrecipitationSummary']['Precipitation']['Imperial']['Value']) + "\n")
-                    f.write(conditions[current_conditions['WeatherIcon']] + "\n")
-                    print("Current precipitation: " + str(current_conditions['PrecipitationSummary']['Precipitation']['Imperial']['Value']) + "\n")
-                    print("Current Weather icon code: " + str(current_conditions['WeatherIcon']) + "\n")
+                    f.write(str(current_conditions['WeatherIcon']) + "\n")      
+                    f.write(time.strftime("%D") + "\n")
                     t = time.localtime()
                     f.write(str(int(time.strftime("%H",t)) * 60 + int(time.strftime("%M",t))))
                     f.close()
