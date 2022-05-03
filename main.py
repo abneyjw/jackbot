@@ -6,6 +6,7 @@ from lcd import *
 from spotify import *
 from weather import *
 from followers import *
+from matrix import *
 import RPi.GPIO as GPIO
 
 
@@ -13,16 +14,20 @@ import RPi.GPIO as GPIO
 PREV = 21 
 TOGGLE = 17 
 SKIP = 22
+MODE_CHANGE = 27
 
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(PREV,GPIO.IN,pull_up_down=GPIO.PUD_DOWN)
 GPIO.setup(TOGGLE,GPIO.IN,pull_up_down=GPIO.PUD_DOWN)
 GPIO.setup(SKIP,GPIO.IN,pull_up_down=GPIO.PUD_DOWN)
+GPIO.setup(MODE_CHANGE,GPIO.IN,pull_up_down=GPIO.PUD_DOWN)
 
 weatherShow = False
 
-n = 0
+modes=["home","music","weather","misc"]
+
+currMode = 0
 
 f = open("/home/pi/jackbot/currents.txt")
 content = f.readlines()
@@ -47,9 +52,13 @@ disp = Display()
 x=threading.Thread(target=disp.setup, args=(mySpot,temp,currentVibe), daemon=True)
 x.start()
 
+#matrix = Matrix()
+#y=threading.Thread(target=matrix.run, daemon=True)
+#y.start()
+
+
 try:
-    time.sleep(1)
-    print("HE")
+    time.sleep(.01)
     mySpot.interact('current')
     while True: 
         if GPIO.input(TOGGLE) == GPIO.HIGH:
@@ -58,8 +67,14 @@ try:
             mySpot.interact("prev")
         elif GPIO.input(SKIP) == GPIO.HIGH:
             mySpot.interact("skip")
-        elif keyboard.is_pressed('e'):
-            break
+        elif GPIO.input(MODE_CHANGE) == GPIO.HIGH:
+            if(currMode == 3):
+                currMode = 0
+            else:
+                currMode = currMode + 1
+            print(modes[currMode])
+            disp.mode = currMode
+            time.sleep(1)
 except KeyboardInterrupt:
     disp.done = True
     print("exiting...")

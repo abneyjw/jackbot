@@ -1,3 +1,5 @@
+import random
+
 class songTracking:
     nice = [1,2,3,4,5,14,21,30,32,33,34]
     cozy = [6,7,8,11,12,13,18,35,36,37,38,39,40]
@@ -15,7 +17,7 @@ class songTracking:
                 fi = "/home/pi/jackbot/winter.txt"
 
         found = False
-
+        print(fi)
         f = open(fi)
         countent = f.readlines()
         for i in range(0,len(countent)):
@@ -33,11 +35,29 @@ class songTracking:
         f.close()
     
     def rec(self,currentVibe,mySpot):
+        if(currentVibe in self.nice):
+                fi = "/home/pi/jackbot/nice.txt"
+        elif(currentVibe in self.cozy):
+                fi = "/home/pi/jackbot/cozy.txt"
+        elif(currentVibe in self.storm):
+                fi = "/home/pi/jackbot/storm.txt"
+        else:
+                fi = "/home/pi/jackbot/winter.txt"
         f = open(fi)
         choices = []
         countent = f.readlines()
         for i in range(0,len(countent)):
             curr = countent[i].split(',')
-            if(int(curr[2]) >= 5):
-                print(curr[1])
-        f.close()
+            if(int(curr[1]) >= 5):
+                for j in range(0,int(curr[1])):
+                    choices.append(curr[0])
+        if(len(choices) > 0):            
+            choice = random.randint(0,(len(choices)-1)) 
+            print(choices[choice]) 
+            mySpot.play_track([choices[choice]])
+            f.close()
+
+
+
+
+

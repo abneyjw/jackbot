@@ -10,8 +10,11 @@ class Spotify:
     load_dotenv()
     done = False
 
+    def play_track(self,myUris):
+        sp.start_playback(uris=myUris)
+
     def id(self):
-        return sp.current_playback()['item']['id']
+        return sp.current_playback()['item']['uri']
 
     def doneCheck(self):
         return self.done
@@ -32,7 +35,11 @@ class Spotify:
         return ("Currently Playing: " + sp.currently_playing()['item']['name'] + " - " + sp.currently_playing()['item']['artists'][0]['name'])
        
     def song(self):
-        return sp.currently_playing()['item']['name']
+        currSong = sp.currently_playing()['item']['name']
+        if(len(currSong)>16):
+            return currSong[0:12] + "..."
+        else:
+            return currSong
 
     def interact2(self, sp):
         loop = True
